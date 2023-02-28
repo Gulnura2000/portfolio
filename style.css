@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:ital@1&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* rgb(88, 88, 88) */
+body {
+    background: linear-gradient(90deg, black, rgb(210, 209, 209));
+    color: white;
+    font-family: 'Josefin Sans', sans-serif
+}
+
+.header1 {
+    position: sticky;
+    z-index: 5;
+    background: linear-gradient(90deg, black, rgb(210, 209, 209));
+    left: 0;
+    top: 0;
+
+}
+
+.logo {
+    height: 80px;
+}
+
+.nav {
+    height: 80px;
+}
+
+.header h1 {}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 1s;
+
+
+}
+
+ul li a:hover {
+    color: white;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li {
+    list-style: none;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, white, black);
+    transition: .5s;
+}
+
+ul li a:hover::before {
+    content: '';
+    width: 100%;
+}
+
+.imgBlock {
+    height: 80vh;
+
+
+    position: relative;
+    transition: 1s;
+/* linear-gradient(90deg, rgb(39, 38, 39), rgba(39, 38, 38, 0.861), rgba(39, 38, 38, 0), rgba(71, 71, 71, 0), rgba(71, 71, 71, 0), rgba(78, 78, 78, 0.805), rgb(78, 78, 78, 1)) */
+    background:  url('./img/photo5.jpg')center/cover;
+    border-radius: 10px;
+
+
+}
+
+
+.imgBlock:hover {
+    transform: scale(0.9);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+
+}
+
+.About {
+
+    margin: auto;
+
+}
+
+.About__block {
+    width: 300px;
+    font-family: 'Josefin Sans', sans-serif;
+
+
+}
+
+.About__block-title {
+    color: grey;
+}
+
+ .skills {
+    width: 80%;
+    margin: auto;
+    padding-left: 20px;
+    padding-top: 0px;
+    display: flex;
+
+    margin-top: 100px;
+
+}
+
+ 
+
+.projects {
+    width: 80%;
+
+    margin: auto;
+    margin-top: 150px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: start;
+}
+
+.projects__constainer-title {
+    margin-top: 10px;
+}
+
+.projects__constainer-item {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 10px;
+    background: url('https://avatars.mds.yandex.net/i?id=467a46b2133c2d446dae805efea1f0fc7ac84152-8269337-images-thumbs&n=13')center/cover;
+    position: relative;
+    display: flex;
+    border: 2px solid white;
+}
+
+
+
+.projects__constainer-item::before {
+    content: "";
+    font-family: "Font Awesome 6.3.0 Free";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0px;
+    background-color: rgba(0, 0, 0, 0.671);
+    transition: .5s;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.projects__constainer-item::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0px;
+    background-color: rgba(0, 0, 0, 0.671);
+    transition: .5s;
+    z-index: 1;
+
+}
+
+.projects__constainer-item:hover::before {
+    content: '';
+    width: 55%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.projects__constainer-item:hover::after {
+    content: '';
+    width: 45%;
+
+}
+
+.projects a {
+    color: white;
+    text-decoration: none;
+}
+
+.burger {
+    display: none;
+}
+.main {
+    text-align: center;
+}
+.myname {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+@media(max-width: 1000px) {
+    .projects__constainer-item {
+        width: 150px;
+        height: 150px;
+    }
+    .imgBlock {
+        height: 40vh;
+        margin: auto;
+    }
+    .myname h4{
+        font-size: 18px;
+        
+            }
+   
+            .myname img {
+                width: 150px;
+            }
+
+}
+@media(max-width: 500px) {
+    .projects__constainer-item {
+        width: 100px;
+        height: 100px;
+    }
+    #svgMyname  {
+        width: 100px;
+    }
+    .myname {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+
+}
