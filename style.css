@@ -131,15 +131,15 @@ ul li a:hover::before {
  
 
 .projects {
-    width: 80%;
+   
 
     margin: auto;
     margin-top: 150px;
 
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    justify-content: start;
+    justify-content: start; */
 }
 
 .projects__constainer-title {
