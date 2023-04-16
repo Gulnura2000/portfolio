@@ -190,17 +190,19 @@ ul li a:hover::before {
 }
 
 .projects__constainer-item:hover::before {
-    content: '';
+    content: 'click';
     width: 55%;
     display: flex;
-    justify-content: end;
+    justify-content:center;
     align-items: center;
 }
 
 .projects__constainer-item:hover::after {
-    content: '';
+    content: 'me';
     width: 45%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projects a {
